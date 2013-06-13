@@ -70,8 +70,6 @@ public abstract class UDPPacket {
     public void setData(byte[] data) {
         this.data = data;
     }
-    
-    
 
     public abstract byte[] createData();
 

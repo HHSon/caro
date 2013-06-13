@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.net.ServerSocket;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 import network.packet.UDPMessage;
@@ -191,11 +192,38 @@ public class UDPSocket {
 
 class sfsdfsdf {
 
-    public static void main(String[] args) throws SocketException {
+    public static void main(String[] args) {
 
-        UDPSocket socket = new UDPSocket(5200);
+        ServerSocket server = null;
+        try {
+            server = new ServerSocket(5000);
+        } catch (IOException ex) {
+            //Logger.getLogger(sfsdfsdf.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Server bi loi");
+            return;
+        }
+        Client t = null;
+        try {
+            t = new Client(server.accept());
+        } catch (IOException ex) {
+            // Logger.getLogger(sfsdfsdf.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Khong tao duoc socket");
+            return;
+
+        }
+
+        System.out.println("Connect to server: " + t.getInformationConnection());
         while (true) {
-            UDPPacket pkt = UDPPacket.buildUDPPacket(socket.recievePacket(500000, 1500, true).getData());
+
+            UDPPacket pkt;
+            try {
+                pkt = UDPPacket.buildUDPPacket(t.rcvByte());
+            } catch (IOException ex) {
+                //Logger.getLogger(sfsdfsdf.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("Khong nhan duoc du lieu");
+                continue;
+
+            }
             if (pkt instanceof UDPMessage) {
                 System.out.println("udp message");
                 UDPMessage message = (UDPMessage) pkt;
@@ -204,6 +232,7 @@ class sfsdfsdf {
                 System.out.println(message.getMessage());
 
             } else {
+                System.out.println("udp point");
                 if (pkt instanceof UDPPoint) {
                     UDPPoint point = (UDPPoint) pkt;
                     System.out.println(point.getUsername());
@@ -211,7 +240,29 @@ class sfsdfsdf {
                     System.out.println(point.getY());
                 }
             }
+
         }
+
+
+//         UDPSocket socket = new UDPSocket(5200);
+//        while (true) {
+//            UDPPacket pkt = UDPPacket.buildUDPPacket(socket.recievePacket(500000, 1500, true).getData());
+//            if (pkt instanceof UDPMessage) {
+//                System.out.println("udp message");
+//                UDPMessage message = (UDPMessage) pkt;
+//                System.out.println(message.getUsername());
+//
+//                System.out.println(message.getMessage());
+//
+//            } else {
+//                if (pkt instanceof UDPPoint) {
+//                    UDPPoint point = (UDPPoint) pkt;
+//                    System.out.println(point.getUsername());
+//                    System.out.println(point.getX());
+//                    System.out.println(point.getY());
+//                }
+//            }
+//        }
 
     }
 }

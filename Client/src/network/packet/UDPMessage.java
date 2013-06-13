@@ -6,8 +6,6 @@ package network.packet;
 
 import network.bit.Bits;
 import network.bit.Bytes;
-import network.symbol.Symbol;
-
 
 /**
  *
@@ -53,20 +51,19 @@ public class UDPMessage extends UDPPacket {
 
     @Override
     public byte[] createData() {
-
-        return this.data;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public UDPPacket createPkt() {
-        return this;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }
 
-class fsdfsfsd {
-
-    public static void main(String[] args) {
-        UDPPacket message = new UDPMessage(Symbol.TYPE_MESSAGE, "lamhaisosdfsfsfdfsfsdfdsfsfsn", "lamhdsfdsfsdfsdfsdfaison");
-        UDPMessage dfsdfsdf = new UDPMessage(message.createData());
-    }
-}
+//class fsdfsfsd {
+//
+//    public static void main(String[] args) {
+//        UDPPacket message = new UDPMessage(Symbol.TYPE_MESSAGE, "lamhaisosdfsfsfdfsfsdfdsfsfsn", "lamhdsfdsfsdfsdfsdfaison");
+//        UDPMessage dfsdfsdf = new UDPMessage(message.createData());
+//    }
+//}

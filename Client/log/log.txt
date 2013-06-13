@@ -357,3 +357,142 @@
 2013-06-13 07:59:28:    Can't connect server
 2013-06-13 08:15:25:    Can't connect server
 2013-06-13 08:16:02:    Can't connect server
+2013-06-13 10:53:05:    Can't connect server 127.0.0.1:5000
+2013-06-13 10:53:20:    Can't connect server 127.0.0.1:5000
+2013-06-13 10:53:30:    <----- this ---->
+2013-06-13 10:53:30:    <----- this ---->
+2013-06-13 10:53:30:    <----- this ---->
+2013-06-13 10:53:30:    Username: a
+2013-06-13 10:53:30:    Password: q
+2013-06-13 10:53:30:    Type: 50
+2013-06-13 10:53:30:    Flag: 3
+2013-06-13 10:53:30:    Accept: 0
+2013-06-13 10:53:30:    <----- this ---->
+2013-06-13 10:53:30:    Fullname: a
+2013-06-13 10:53:50:    Can't connect server 127.0.0.1:5000
+2013-06-13 10:54:11:    <----- this ---->
+2013-06-13 10:54:11:    <----- this ---->
+2013-06-13 10:54:11:    <----- this ---->
+2013-06-13 10:54:11:    Username: u1
+2013-06-13 10:54:11:    Password: q
+2013-06-13 10:54:11:    Type: 50
+2013-06-13 10:54:11:    Flag: 3
+2013-06-13 10:54:11:    Accept: 0
+2013-06-13 10:54:11:    <----- this ---->
+2013-06-13 10:54:11:    Fullname: q
+2013-06-13 10:54:51:    Successfully connection to server:192.168.1.100:5000
+2013-06-13 10:55:08:    <----- this ---->
+2013-06-13 10:55:08:    <----- this ---->
+2013-06-13 10:55:08:    <----- this ---->
+2013-06-13 10:55:08:    Username: u1
+2013-06-13 10:55:08:    Password: w
+2013-06-13 10:55:08:    Type: 50
+2013-06-13 10:55:08:    Flag: 3
+2013-06-13 10:55:08:    Accept: 0
+2013-06-13 10:55:08:    <----- this ---->
+2013-06-13 10:55:08:    Fullname: q
+2013-06-13 10:55:08:    Can't send pkt to /192.168.1.100:5000 java.lang.NullPointerException
+2013-06-13 10:55:08:    Sucessfully send pkt to /192.168.1.100:5000
+2013-06-13 10:55:08:    Function: setTimeOut(int timeout): Sucessfully set timeout 500
+2013-06-13 10:55:08:    Dang ky ko thanh cong voi ten tai khoan: u1 null
+2013-06-13 10:55:19:    <----- this ---->
+2013-06-13 10:55:19:    <----- this ---->
+2013-06-13 10:55:19:    <----- this ---->
+2013-06-13 10:55:19:    Username: u1
+2013-06-13 10:55:19:    Password: w
+2013-06-13 10:55:19:    Type: 50
+2013-06-13 10:55:19:    Flag: 3
+2013-06-13 10:55:19:    Accept: 0
+2013-06-13 10:55:19:    <----- this ---->
+2013-06-13 10:55:19:    Fullname: q
+2013-06-13 10:55:19:    Can't send pkt to /192.168.1.100:5000 java.lang.NullPointerException
+2013-06-13 10:55:19:    Sucessfully send pkt to /192.168.1.100:5000
+2013-06-13 10:55:19:    Function: setTimeOut(int timeout): Sucessfully set timeout 500
+2013-06-13 10:55:19:    Dang ky ko thanh cong voi ten tai khoan: u1 null
+2013-06-13 10:55:26:    <----- this ---->
+2013-06-13 10:55:26:    <----- this ---->
+2013-06-13 10:55:26:    <----- this ---->
+2013-06-13 10:55:26:    Username: u1
+2013-06-13 10:55:26:    Password: w
+2013-06-13 10:55:26:    Type: 50
+2013-06-13 10:55:26:    Flag: 3
+2013-06-13 10:55:26:    Accept: 0
+2013-06-13 10:55:26:    <----- this ---->
+2013-06-13 10:55:26:    Fullname: q
+2013-06-13 10:55:26:    Can't send pkt to /192.168.1.100:5000 java.lang.NullPointerException
+2013-06-13 10:55:26:    Sucessfully send pkt to /192.168.1.100:5000
+2013-06-13 10:55:26:    Function: setTimeOut(int timeout): Sucessfully set timeout 500
+2013-06-13 10:55:26:    Dang ky ko thanh cong voi ten tai khoan: u1 null
+2013-06-13 10:55:27:    <----- this ---->
+2013-06-13 10:55:27:    <----- this ---->
+2013-06-13 10:55:27:    <----- this ---->
+2013-06-13 10:55:27:    Username: u1
+2013-06-13 10:55:27:    Password: w
+2013-06-13 10:55:27:    Type: 50
+2013-06-13 10:55:27:    Flag: 3
+2013-06-13 10:55:27:    Accept: 0
+2013-06-13 10:55:27:    <----- this ---->
+2013-06-13 10:55:27:    Fullname: q
+2013-06-13 10:55:27:    Can't send pkt to /192.168.1.100:5000 java.lang.NullPointerException
+2013-06-13 10:55:27:    Sucessfully send pkt to /192.168.1.100:5000
+2013-06-13 10:55:27:    Function: setTimeOut(int timeout): Sucessfully set timeout 500
+2013-06-13 10:55:27:    Dang ky ko thanh cong voi ten tai khoan: u1 null
+2013-06-13 10:55:50:    Successfully connection to server:192.168.1.100:5000
+2013-06-13 10:56:05:    Successfully connection to server:192.168.1.100:5000
+2013-06-13 10:56:14:    <----- this ---->
+2013-06-13 10:56:14:    <----- this ---->
+2013-06-13 10:56:14:    <----- this ---->
+2013-06-13 10:56:14:    Username: u1
+2013-06-13 10:56:14:    Password: q
+2013-06-13 10:56:14:    Type: 50
+2013-06-13 10:56:14:    Flag: 3
+2013-06-13 10:56:14:    Accept: 0
+2013-06-13 10:56:14:    <----- this ---->
+2013-06-13 10:56:14:    Fullname: q
+2013-06-13 10:56:14:    Can't send pkt to /192.168.1.100:5000 java.lang.NullPointerException
+2013-06-13 10:56:14:    Sucessfully send pkt to /192.168.1.100:5000
+2013-06-13 10:56:14:    Function: setTimeOut(int timeout): Sucessfully set timeout 500
+2013-06-13 10:56:14:    Dang ky ko thanh cong voi ten tai khoan: u1 null
+2013-06-13 10:57:11:    Successfully connection to server:192.168.1.100:5000
+2013-06-13 10:57:20:    <----- this ---->
+2013-06-13 10:57:20:    <----- this ---->
+2013-06-13 10:57:20:    <----- this ---->
+2013-06-13 10:57:20:    Username: u1
+2013-06-13 10:57:20:    Password: q
+2013-06-13 10:57:20:    Type: 50
+2013-06-13 10:57:20:    Flag: 3
+2013-06-13 10:57:20:    Accept: 0
+2013-06-13 10:57:20:    <----- this ---->
+2013-06-13 10:57:20:    Fullname: q
+2013-06-13 10:59:04:    Successfully connection to server:192.168.1.100:5000
+2013-06-13 10:59:04:    Successfully new IO
+2013-06-13 10:59:13:    <----- this ---->
+2013-06-13 10:59:13:    <----- this ---->
+2013-06-13 10:59:13:    <----- this ---->
+2013-06-13 10:59:13:    Username: u1
+2013-06-13 10:59:13:    Password: q
+2013-06-13 10:59:13:    Type: 50
+2013-06-13 10:59:13:    Flag: 3
+2013-06-13 10:59:13:    Accept: 0
+2013-06-13 10:59:13:    <----- this ---->
+2013-06-13 10:59:13:    Fullname: q
+2013-06-13 10:59:13:    Sucessfully send pkt to /192.168.1.100:5000
+2013-06-13 10:59:13:    Function: setTimeOut(int timeout): Sucessfully set timeout 500
+2013-06-13 10:59:13:    Successfully rcv pkt to /192.168.1.100:5000
+2013-06-13 10:59:18:    Dang ky thanh cong voi ten tai khoan: u1
+2013-06-13 10:59:18:    Function: setTimeOut(int timeout): Sucessfully set timeout 0
+2013-06-13 11:02:26:    Successfully connection to server:192.168.1.100:5000
+2013-06-13 11:02:26:    Successfully new IO
+2013-06-13 11:02:32:    Sucessfully send pkt to /192.168.1.100:5000
+2013-06-13 11:02:32:    Successfully rcv pkt to /192.168.1.100:5000
+2013-06-13 11:02:32:    Nhan duoc goi tin phan hoi tu server.
+2013-06-13 11:02:32:    Dang nhap thanh cong voi ten tai khoan: u1
+2013-06-13 11:02:32:    Function: setTimeOut(int timeout): Sucessfully set timeout 0
+2013-06-13 11:03:27:    Can't connect server 192.168.1.100:5000
+2013-06-13 11:03:59:    Successfully connection to server:192.168.1.100:5000
+2013-06-13 11:03:59:    Successfully new IO
+2013-06-13 11:04:05:    Sucessfully send pkt to /192.168.1.100:5000
+2013-06-13 11:04:05:    Successfully rcv pkt to /192.168.1.100:5000
+2013-06-13 11:04:05:    Nhan duoc goi tin phan hoi tu server.
+2013-06-13 11:04:05:    Dang nhap thanh cong voi ten tai khoan: admin
+2013-06-13 11:04:05:    Function: setTimeOut(int timeout): Sucessfully set timeout 0

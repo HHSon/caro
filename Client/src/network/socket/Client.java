@@ -11,15 +11,10 @@ package network.socket;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
 import java.net.Socket;
 import java.net.SocketException;
-import java.net.UnknownHostException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.imageio.IIOException;
 import network.symbol.Symbol;
 
 //import java.lang.ArrayIndexOutOfBoundsException;
@@ -33,157 +28,90 @@ public class Client {
     public static final int LENGTH_DATA = Symbol.LENGTH_DATA;
     DataInputStream in;
     DataOutputStream out;
-    ObjectOutputStream objOut;
-    ObjectInputStream objIn;
 
-    public void createIOObject() {
+    private void createIO() {
         try {
-            objOut = new ObjectOutputStream(socket.getOutputStream());
-            objIn = new ObjectInputStream(socket.getInputStream());
+            this.in = new DataInputStream(this.socket.getInputStream());
+            this.out = new DataOutputStream(this.socket.getOutputStream());
         } catch (IOException ex) {
             Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+            log.Logger.write("Function new IO: " + ex);
+            return;
         }
-
+        log.Logger.write("Successfully new IO");
     }
 
-    public Client(Socket socket) throws IOException {
+    public Client(Socket socket) {
         this.socket = socket;
-        this.in = new DataInputStream(this.socket.getInputStream());
-        this.out = new DataOutputStream(this.socket.getOutputStream());
-        // objOut = new ObjectOutputStream(this.socket.getOutputStream());
-        // objIn = new ObjectInputStream(this.socket.getInputStream());
+        this.createIO();
     }
 
-    public Client(Socket socket, int timeout) throws IOException {
+    public Client(Socket socket, int timeout) {
         this.socket = socket;
-        this.socket.setSoTimeout(timeout);
-        this.in = new DataInputStream(this.socket.getInputStream());
-        this.out = new DataOutputStream(this.socket.getOutputStream());
-        // objOut = new ObjectOutputStream(socket.getOutputStream());
-        // objIn = new ObjectInputStream(socket.getInputStream());
+        this.createIO();
+        this.setTimeOut(timeout);
     }
 
-    public Client(String ip, int port) throws UnknownHostException, IOException {
+    public Client(String ip, int port) throws Exception {
 
         try {
             this.socket = new Socket(ip, port);
         } catch (Exception e) {
-            log.Logger.write("Can't connect server");
-            return;
+            log.Logger.write("Can't connect server " + ip + ":" + port);
+            throw new Exception(e);
         }
 
         log.Logger.write("Successfully connection to server:" + ip + ":" + port);
-        this.in = new DataInputStream(this.socket.getInputStream());
-        this.out = new DataOutputStream(this.socket.getOutputStream());
-        
-        // objOut = new ObjectOutputStream(socket.getOutputStream());
-        // objIn = new ObjectInputStream(socket.getInputStream());
-        // this.createIOObject();
-
+        this.createIO();
     }
 
-    public Client(String ip, int port, int timout) throws UnknownHostException, IOException {
+    public Client(String ip, int port, int timout) {
         try {
             this.socket = new Socket(ip, port);
         } catch (Exception e) {
-            log.Logger.write("Can't connect server");
+            log.Logger.write("Can't connect server " + ip + ":" + port);
             return;
         }
 
         log.Logger.write("Successfully connection to server:" + ip + ":" + port + ",TIMEOUT: " + timout);
-
-        this.socket.setSoTimeout(timout);
-        //objOut = new ObjectOutputStream(socket.getOutputStream());
-        //objIn = new ObjectInputStream(socket.getInputStream());
-
-        //     this.in = new DataInputStream(this.socket.getInputStream());
-        //    this.out = new DataOutputStream(this.socket.getOutputStream());
-
+        this.createIO();
+        this.setTimeOut(timout);
     }
 
-    public void sendByte(byte[] data) throws IOException {
-        out.write(data, 0, data.length);
+    public boolean sendByte(byte[] data) {
+        try {
+            out.write(data, 0, data.length);
+        } catch (Exception ex) {
+            log.Logger.write("Can't send pkt to " + socket.getRemoteSocketAddress() + " " + ex);
+        }
+
+        log.Logger.write("Sucessfully send pkt to " + socket.getRemoteSocketAddress());
+        return true;
     }
 
     public byte[] rcvByte() throws IOException {
         byte[] data = new byte[LENGTH_DATA];
-        this.in.read(data);
+        try {
+            this.in.read(data);
+        } catch (Exception e) {
+            //  log.Logger.write("Successfully rcv pkt to " + socket.getRemoteSocketAddress());
+            throw new IOException(e.getMessage());
+        }
+        log.Logger.write("Successfully rcv pkt to " + socket.getRemoteSocketAddress());
         return data;
     }
 
-    public boolean sendObject(Object object) {
+    public byte[] rcvByte(int length) throws IOException {
+        byte[] data;
+        data = new byte[length];
         try {
-            objOut = new ObjectOutputStream(this.socket.getOutputStream());
-        } catch (IOException ex) {
-            //  Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
-            log.Logger.write("ERROR function sendObject-new objOut: socket: " + this.getInformationConnection() + " " + ex.getMessage());
-            return false;
+            this.in.read(data);
+        } catch (Exception e) {
+            //  log.Logger.write("Successfully rcv pkt to " + socket.getRemoteSocketAddress());
+            throw new IOException(e.getMessage());
         }
-
-
-        if (object == null) {
-            log.Logger.write("ERROR Function sendObjcet to: object null");
-            return false;
-        }
-
-        try {
-            objOut.writeObject(object);
-            log.Logger.write("Sucessfully Function sendObjcet to: " + socket.getRemoteSocketAddress().toString());
-
-        } catch (IOException ex) {
-            log.Logger.write("ERROR Function sendObjcet-write to: " + socket.getRemoteSocketAddress().toString() + " " + ex.getMessage());
-            return false;
-        }
-
-//        try {
-//            objOut.close();
-//        } catch (IOException ex) {
-//            log.Logger.write("ERROR function sendObject-close objOut: socket" + this.getInformationConnection() + " " + ex.getMessage());
-//            //Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-
-        return true;
-    }
-
-    public Object rcvObjcet() throws IOException {
-
-        Object object = null;
-        try {
-            objIn = new ObjectInputStream(this.socket.getInputStream());
-        } catch (IOException ex) {
-            //  Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
-//            if (!ex.getMessage().equals("Read timed out")) {
-//                log.Logger.write("ERROR function rcvObjcet-new objIn: socket: " + this.getInformationConnection() + " " + ex.getMessage());
-//            }
-            throw new IIOException(ex.getMessage());
-
-        }
-
-
-        try {
-            object = this.objIn.readObject();
-
-        } catch (IOException | ClassNotFoundException ex) {
-            //  Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
-
-            if (!ex.getMessage().equals("Read timed out")) {
-                log.Logger.write("ERROR Function rcvObjcet-read from: " + socket.getRemoteSocketAddress().toString() + " " + ex.getMessage());
-            }
-
-            throw new IOException(ex.getMessage());
-
-        }
-
-//        try {
-//            objIn.close();
-//        } catch (IOException ex) {
-//            // Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
-//            log.Logger.write("ERROR function rcvObjcet-close objIn: socket" + this.getInformationConnection() + " " + ex.getMessage());
-//            throw new ExportException(ex.getMessage());
-//        }
-
-        log.Logger.write("Sucessfully Function rcvObjcet from: " + socket.getRemoteSocketAddress().toString());
-        return object;
+        log.Logger.write("Successfully rcv pkt to " + socket.getRemoteSocketAddress());
+        return data;
     }
 
     public String getAdd() {
@@ -206,23 +134,35 @@ public class Client {
         return this.getSocket().getRemoteSocketAddress().toString();
     }
 
-    public void setTimeOut(int timeout) {
+    public final void setTimeOut(int timeout) {
         try {
             this.socket.setSoTimeout(timeout);
         } catch (SocketException ex) {
-            ///Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
-            log.Logger.write("Can't set timeout " + timeout);
+            log.Logger.write("Function: setTimeOut(int timeout): Can't set timeout " + timeout);
+            return;
         }
-
-        log.Logger.write("Sucessfully set timeout " + timeout);
+        log.Logger.write("Function: setTimeOut(int timeout): Sucessfully set timeout " + timeout);
     }
 
-    public void close() throws IOException {
-        //  in.close();
-        //  out.close();
-        this.objIn.close();
-        this.objOut.close();
-        socket.close();
+    public void close() {
+        try {
+            if (!socket.isClosed()) {
+                socket.close();
+            }
+            in.close();
+            out.close();
 
+        } catch (IOException ex) {
+            log.Logger.write("Function: Close(): Can't close IO " + ex);
+            return;
+        }
+        log.Logger.write("Function: Close(): Succesfully close IO");
+    }
+}
+
+class RunClient {
+
+    public static void main(String[] args) {
+        Client client = new Client("127.0.0.1", 5000, 100);
     }
 }

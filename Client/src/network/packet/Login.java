@@ -4,103 +4,105 @@
  */
 package network.packet;
 
-import java.io.IOException;
-import network.socket.Client;
-import network.symbol.Symbol;
-
+import network.bit.Bits;
+import network.bit.Bytes;
 
 /**
  *
  * @author LHS
+ *
  */
 public class Login extends Packet {
 
-    private String username;
-    private String password;
-    private byte accepter;
+    protected String username;
+    protected String password;
+    protected byte accept;  // byte 2
 
-    public Login(String username, String password, byte flag, byte accepter) {
+    public Login() {
+    }
+
+    public Login(String username, String password, byte type, byte flag, byte accept) {
+        super(type, flag);
         this.username = username;
         this.password = password;
-        this.accepter = accepter;
-        this.flag = flag;
+        this.accept = accept;
+        this.data[2] = accept;
+
+        byte[] arrayByte = username.getBytes();
+        int offset = 2 + 1;
+
+        Bits.putInt(this.data, offset, arrayByte.length);
+        offset += 4;
+
+        Bytes.addByte(this.data, offset, arrayByte, arrayByte.length);
+        offset += arrayByte.length;
+
+        arrayByte = password.getBytes();
+        Bits.putInt(this.data, offset, arrayByte.length);
+        offset += 4;
+
+        Bytes.addByte(this.data, offset, arrayByte, arrayByte.length);
+        this.lengthData = offset + arrayByte.length;
     }
 
-    public Login(String username, String password) {
-        this.password = password;
-        this.username = username;
-        this.flag = Symbol.FLAG_REQUEST;
-        this.accepter = Symbol.ACCEPTER_FALASE;
-    }
+    public Login(byte[] data) {
+        super(data);
+        this.accept = data[2];
 
-    public Login(byte accpeter) {
-        this.accepter = accpeter;
-        this.flag = Symbol.FLAG_REPLAY;
-        this.username = null;
-        this.password = null;
-    }
+        int offfset = 2 + 1; //3
+        int length = Bits.getInt(data, offfset);
+        offfset += 4; //7
 
-    public String getPassword() {
-        return password;
+        this.username = new String(Bytes.copyByte(data, offfset, offfset + length));
+        offfset += length; //16
+
+        length = Bits.getInt(data, offfset);
+        offfset += 4; //20
+        this.password = new String(Bytes.copyByte(data, offfset, offfset + length));
+        this.lengthData = offfset + length;
     }
 
     public String getUsername() {
-        return username;
+        return this.username;
     }
 
-    public byte getAccepter() {
-        return accepter;
+    public String getPassword() {
+        return this.password;
+    }
+
+    public void setAccept(byte accept) {
+        this.accept = accept;
+        this.data[2] = accept;
+    }
+
+    public byte getAccept() {
+        return this.accept;
     }
 
     @Override
-    public byte getFlag() {
-        return super.getFlag();
-    }
+    public void printInformation() {
 
-    public void setAccepter(byte accepter) {
-        this.accepter = accepter;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-}
-
-class rundemo {
-
-    public static void main(String[] args) throws IOException, InterruptedException, InterruptedException {
-
-//        for (int i = 0; i < 200; i++) {
-//            Client tcp = new Client("127.0.0.1", 5000);
-//            Thread.sleep(50);
-//            try {
-//                tcp.close();
-//            } catch (Exception e) {
-//                System.out.println("Can't close socket " + (i + 1));
-//            }
-//            System.out.println(tcp.getSocket().isClosed());
-//
-//            System.out.println("Create socket " + (i + 1) + "th");
-//        }
+        System.out.println("<----- this ---->");
+        System.out.println("Username: " + this.username);
+        System.out.println("Password: " + this.password);
+        System.out.println("Flag: " + this.flag);
+        System.out.println("Type: " + this.type);
+        System.out.println("Accept: " + this.accept);
+        log.Logger.write("<----- this ---->");
 
 
-        Client tcp = new Client("127.0.0.1", 5000);
-        Login login = new Login("lamhaison", "230866668");
-        login = new Login("lamhaison", "admin");
-        for (int i = 0; i < 1; i++) {
-            tcp.sendObject(login);
-//            tcp.close();
-            Thread.sleep(50);
+        synchronized (log.Logger.class) {
+            log.Logger.write("<----- this ---->");
+            log.Logger.write("Username: " + this.username);
+            log.Logger.write("Password: " + this.password);
+            log.Logger.write("Type: " + this.type);
+            log.Logger.write("Flag: " + this.flag);
+            log.Logger.write("Accept: " + this.accept);
+            log.Logger.write("<----- this ---->");
+
         }
-        
-        while(true){
-            
-        }
-        
+
+
 
     }
 }

@@ -35,13 +35,12 @@ public class LoginController {
         if (loginFrame.checkInputData() == false) {
             return;
         }
-        loginModel.login(loginFrame.getUserName(), loginFrame.getPassword());
+        loginModel.login();
     }
     
     private ActionListener btnSignUpActionListener = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent ae) {
-            System.out.println("OK");
             FrameManager.getInstance().showSignUpFrame();
         }
     };

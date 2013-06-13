@@ -1,22 +1,25 @@
 package view;
 
+import controller.SignUpController;
 import java.awt.Color;
+import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
-import java.io.IOException;
-import java.net.SocketException;
 import java.util.Arrays;
-import javax.swing.JOptionPane;
-import network.packet.Registry;
-import network.symbol.Symbol;
+import model.SignUpModel;
 
 public class SignUpFrame extends javax.swing.JFrame {
     
+    private SignUpController signUpController;
+    private SignUpModel signUpModel;
     private char passwordEchoChar;
     
     
     public SignUpFrame() {
         initComponents();
         initScreen();
+        
+        signUpModel = new SignUpModel(this);
+        signUpController = new SignUpController(this, signUpModel);
     }
     
     private void initScreen() {
@@ -25,57 +28,24 @@ public class SignUpFrame extends javax.swing.JFrame {
         passwordEchoChar = ptxtPassword.getEchoChar();
     }
     
-    public void signUp() {
-        if (checkInputData() == false) {
-            return;
-        }
-        
-        String userName = txtUserName.getText();
-        String password = ptxtPassword.getText();
-        String fullName = txtFullName.getText();
-
-        System.out.println(password);
-        
-        Registry pktRegistry = new Registry(userName, password, fullName);
-        Main.mainConnection.sendObject(pktRegistry);
-        try {
-            Main.mainConnection.getSocket().setSoTimeout(Symbol.TIMEOUT_SIGN_UP);
-            log.Logger.write("Set timeout cho mainsocket " + Symbol.TIMEOUT_SIGN_UP);
-        } catch (SocketException ex) {
-            log.Logger.write("Set timeout cho mainsocket " + Symbol.TIMEOUT_SIGN_UP + " khong thanh cong");
-        }
-
-        Registry pktRecieve = null;
-        try {        
-            pktRecieve = (Registry) Main.mainConnection.rcvObjcet();
-        } catch (IOException ex) {
-           // Logger.getLogger(SignUpFrame.class.getName()).log(Level.SEVERE, null, ex);
-            log.Logger.write("Dang ky ko thanh cong voi ten tai khoan: " + pktRegistry.getUsername() + " " + ex.getMessage());
-        }
-
-        if (pktRecieve != null && pktRecieve.getAccepter() == Symbol.ACCEPTER_TRUE) {
-            //dang nhap
-            FrameManager.showMessageBox(
-                    "Bạn đã đăng kí thành công với tài khoản " + txtUserName.getText() 
-                    + ". Giờ bạn có thể đăng nhập với tài khoản này", 
-                    "Đăng kí thành công",
-                    JOptionPane.INFORMATION_MESSAGE);
-            
-             FrameManager.getInstance().disposeSignUpFrame();
-            log.Logger.write("Dang ky thanh cong voi ten tai khoan: " + pktRegistry.getUsername());
-        } else {
-            //yeu cau hui lai
-        }
-
-        try {
-            Main.mainConnection.getSocket().setSoTimeout(0);
-            log.Logger.write("Set time out = 0 cho mainsocket");
-        } catch (SocketException ex) {
-            log.Logger.write("Co loi trong qua trinh setimeout = 0 cho mainsocket");
-        }
+    public String getUserName() {
+        return txtUserName.getText();
     }
     
-    public void receiveSignUpInfoFromServer() {
+    public String getFullName() {
+        return txtFullName.getText();
+    }
+    
+    public String getPassword() {
+        return ptxtPassword.getText();
+    }
+    
+    public void addBtnSignUpActionListener(ActionListener actionListener) {
+        if (actionListener == null) {
+            throw new NullPointerException();
+        }
+        
+        btnSignUp.addActionListener(actionListener);
     }
     
     public boolean checkInputData() {
@@ -232,11 +202,6 @@ public class SignUpFrame extends javax.swing.JFrame {
 
         btnSignUp.setBackground(new java.awt.Color(102, 153, 0));
         btnSignUp.setText("Đăng Kí");
-        btnSignUp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSignUpActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -268,10 +233,6 @@ public class SignUpFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignUpActionPerformed
-        signUp();
-    }//GEN-LAST:event_btnSignUpActionPerformed
 
     private void chkShowPasswordItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_chkShowPasswordItemStateChanged
         if (evt.getStateChange() == ItemEvent.DESELECTED) {
