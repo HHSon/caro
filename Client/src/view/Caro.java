@@ -5,6 +5,7 @@
 package View;
 
 import Controller.GameController;
+import controller.ChatController;
 import enums.ModePlay;
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
@@ -26,10 +27,13 @@ public class Caro extends JFrame{
         
         GameController gameController = new GameController(ModePlay.Computer);
         GamePanel gamePanel = new GamePanel(gameController);
+        ChatController chatController = new ChatController();
+        view.ChatPanel chatPanel = new view.ChatPanel(chatController);
         
         this.setLayout(new BorderLayout());
             
         add(gamePanel, BorderLayout.CENTER);
+        add(chatPanel, BorderLayout.EAST);
         
     }
     
