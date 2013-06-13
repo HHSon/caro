@@ -5,6 +5,8 @@
 package Controller;
 
 import Model.Game;
+import Model.Player;
+import View.GamePanel;
 import enums.ModePlay;
 
 /**
@@ -14,14 +16,17 @@ import enums.ModePlay;
 public class GameController{    
     private ModePlay mode;
     private Game game;
+    private GamePanel panel;
 
-    public GameController(ModePlay mode) {
-        game = new Game("You", "Computer", this);
+    public GameController(String yourName, String friendName, ModePlay mode) {
+        this.mode = mode;
+        game = new Game(yourName, friendName, this);
     } 
     
     public void Play()
     {
         game.NewGame();
+        panel.StartGame();
     }
     
     public void YouMoveFinished(int r, int c)
@@ -29,32 +34,45 @@ public class GameController{
         
     }
     
-    /**
-     * @return the mode
-     */
+    public void FriendMove(int r, int c)
+    {
+        game.FriendMove(r, c);
+    }
+    
+    public void GameTimeoutHandle(String name)
+    {
+        
+    }
+    
+    public void PlayerMoved(Player player)
+    {
+        panel.PlayerMoved(player);
+    }
+    
+    public void EndGame(Player player)
+    {
+        panel.EndGame();
+    }
+    
     public ModePlay getMode() {
         return mode;
     }
 
-    /**
-     * @param mode the mode to set
-     */
     public void setMode(ModePlay mode) {
         this.mode = mode;
     }
 
-    /**
-     * @return the game
-     */
     public Game getGame() {
         return game;
     }
 
-    /**
-     * @param game the game to set
-     */
     public void setGame(Game game) {
         this.game = game;
+    }
+    
+    public void setView(GamePanel view)
+    {
+        this.panel = view;
     }
     
 }

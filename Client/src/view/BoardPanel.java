@@ -56,7 +56,7 @@ public class BoardPanel extends JPanel {
         posVC = new Point();
         background = Color.white;
         foreground = Color.black;
-        buffer = new BufferedImage(nCol * sizeCell, nRow * sizeCell, BufferedImage.TYPE_INT_ARGB);
+        buffer = new BufferedImage(nCol * sizeCell + 2, nRow * sizeCell + 2, BufferedImage.TYPE_INT_ARGB);
         graphic = buffer.getGraphics();
         isDrawVitualChess = false;
         setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));

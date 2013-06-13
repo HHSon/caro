@@ -8,10 +8,8 @@ import Controller.BoardController;
 import Controller.GameController;
 import Model.Game;
 import Model.Player;
-import events.GameListener;
 import events.TimeoutListener;
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.MouseAdapter;
@@ -19,13 +17,14 @@ import java.awt.event.MouseEvent;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
  *
  * @author Minh Khanh
  */
-public class GamePanel extends JPanel implements TimeoutListener, GameListener{
+public class GamePanel extends JPanel implements TimeoutListener{
 
     private TimePanel timerPlayer1;
     private TimePanel timerPlayer2;
@@ -46,7 +45,6 @@ public class GamePanel extends JPanel implements TimeoutListener, GameListener{
         JPanel content = new JPanel();
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
         
-        game.addGameListener(this);
         timerPlayer1 = new TimePanel();
         timerPlayer1.setNamePlayer(game.getYou().getName());
         timerPlayer1.addTiemoutListener(this);
@@ -57,9 +55,10 @@ public class GamePanel extends JPanel implements TimeoutListener, GameListener{
         JPanel timePanel = new JPanel();
         timePanel.setLayout(new BoxLayout(timePanel, BoxLayout.X_AXIS));
         timePanel.add(timerPlayer1);
-        timePanel.add(Box.createRigidArea(new Dimension(20, 5)));
+        timePanel.add(Box.createRigidArea(new Dimension(10, 5)));
+        timePanel.add(new JLabel("<html><b>VS</b>"));
+        timePanel.add(Box.createRigidArea(new Dimension(10, 5)));
         timePanel.add(timerPlayer2);
-        timePanel.setBackground(new Color(0, 0, 0, 0));
         
         btPlayAgain = new JButton("Play");
         JPanel btpanel = new JPanel();
@@ -77,13 +76,12 @@ public class GamePanel extends JPanel implements TimeoutListener, GameListener{
         JPanel time = new JPanel(new BorderLayout());
         time.add(timePanel, BorderLayout.WEST);
         time.add(btpanel, BorderLayout.EAST);  
-        time.setBackground(new Color(0, 0, 0, 0));
         
         boardPanel = new BoardPanel(game);
         BoardController boardController = new BoardController(game, boardPanel, controller.getMode());
         boardPanel.setController(boardController);
-        boardPanel.setPreferredSize(new Dimension(450, 450));
-        boardPanel.setMaximumSize(new Dimension(450, 450));
+        boardPanel.setPreferredSize(new Dimension(451, 451));
+        boardPanel.setMaximumSize(new Dimension(451, 451));
         
         content.add(time);
         content.add(Box.createRigidArea(new Dimension(10, 10)));
@@ -99,10 +97,10 @@ public class GamePanel extends JPanel implements TimeoutListener, GameListener{
 
     @Override
     public void TimeoutHandle(TimePanel sender) {
-        
+        String name = sender.getNamePlayer();
+        controller.GameTimeoutHandle(name);
     }
 
-    @Override
     public void PlayerMoved(Player player) {
         TimePanel temp = timerPlayer1;
         if (timerPlayer1.getNamePlayer().equals(player.getName()))
@@ -117,7 +115,6 @@ public class GamePanel extends JPanel implements TimeoutListener, GameListener{
         }
     }
 
-    @Override
     public void StartGame() {
         if (game.NextPlayerIsYou())
         {
@@ -129,7 +126,6 @@ public class GamePanel extends JPanel implements TimeoutListener, GameListener{
         }
     }
 
-    @Override
     public void EndGame() {
         timerPlayer1.reset();
         timerPlayer2.reset();

@@ -244,3 +244,5 @@
 2013-06-13 12:31:33:    Nhan duoc goi tin phan hoi tu server.
 2013-06-13 12:31:33:    Dang nhap thanh cong voi ten tai khoan: admin
 2013-06-13 12:31:33:    Function: setTimeOut(int timeout): Sucessfully set timeout 0
+2013-06-13 22:15:26:    Can't connect server 192.168.1.100:5000
+2013-06-13 22:57:27:    Can't connect server 192.168.1.100:5000

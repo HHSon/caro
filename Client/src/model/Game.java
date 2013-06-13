@@ -8,7 +8,6 @@ import enums.ModePlay;
 import Controller.GameController;
 import enums.Chess;
 import enums.PlayerCode;
-import events.GameListener;
 import java.awt.Point;
 
 /**
@@ -25,7 +24,6 @@ public class Game {
     private boolean isPlaying;
     private boolean endGame;
     private GameController controller;
-    private GameListener listener;
 
     public Game(String namePlayer1, String namePlayer2, GameController c) {          
         initBoard();
@@ -55,10 +53,6 @@ public class Game {
         endGame = false;
         currentPlayerMove = you;
         setFirstPlayer(true);
-        if (listener != null)
-        {
-            listener.StartGame();
-        }
     }
     
     public void NewGame(boolean firstPlayerIsYou)
@@ -67,10 +61,6 @@ public class Game {
         isPlaying = true;
         endGame = false;
         setFirstPlayer(firstPlayerIsYou);
-        if (listener != null)
-        {
-            listener.StartGame();
-        }
     }
     
     public void setFirstPlayer(boolean isYou)
@@ -107,13 +97,11 @@ public class Game {
             board[r][c] = currentPlayerMove.getCode();
             endGame = checkWin(r, c);
             isPlaying = !endGame;
-            if (listener != null)
+            
+            controller.PlayerMoved(currentPlayerMove);            
+            if (endGame)
             {
-                listener.PlayerMoved(currentPlayerMove);
-            }
-            if (endGame && listener != null)
-            {
-                listener.EndGame();
+                controller.EndGame(currentPlayerMove);
             }
             currentPlayerMove = (currentPlayerMove == friend)? you : friend;
             return true;
@@ -298,10 +286,5 @@ public class Game {
     public Player CurrentPlayerMove()
     {
         return this.currentPlayerMove;
-    }
-    
-    public void addGameListener(GameListener l)
-    {
-        this.listener = l;
     }
 }

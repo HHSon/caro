@@ -4,7 +4,7 @@
  */
 package View;
 
-import controller.ChatController;
+import controller.CaroController;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -20,56 +20,44 @@ import javax.swing.JPanel;
 public class Caro extends JFrame{
     
     private int WidthMin = 400;
-    private int WidthMax = 900;
+    private int WidthMax = 860;
+    private int Height = 585;
     private JPanel content;
+    private CaroController controller;
     
     public Caro()
-    {
+    {        
         initComponents();
     }
     
     private void initComponents()
     {
-        setSize(WidthMin, 600);
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        
-        setLayout(new FlowLayout(FlowLayout.CENTER, 20, 20));
-        
+        setResizable(false);
+        setLayout(new FlowLayout(FlowLayout.CENTER, 30, 10));
         content = new JPanel();
-        content.setLayout(new BorderLayout(10, 20));        
-        ChatController chatController = new ChatController();
-        view.ChatPanel chatPanel = new view.ChatPanel(chatController);
-        
+        content.setLayout(new BorderLayout(25, 20));  
+        add(content);
+    }
+    
+    public void addChatPanel(view.ChatPanel chatPanel)
+    {
+        setSize(WidthMin, Height);        
         JPanel center = new JPanel();
         center.setLayout(new BoxLayout(center, BoxLayout.Y_AXIS));
         center.add(Box.createRigidArea(new Dimension(10, 65)));
         center.add(chatPanel);
         content.add(center, BorderLayout.CENTER);        
-        add(content);
+        
+    }
+    
+    public void setController(CaroController c)
+    {
+        this.controller = c;
     }
     
     public void addGamePanel(GamePanel gamePanel)
     {
-        setSize(WidthMax, 600);
+        setSize(WidthMax, Height);
         content.add(gamePanel, BorderLayout.WEST);
-    }
-    
-    public static void main(String args[]) {
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Caro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Caro().setVisible(true);
-            }
-        });
     }
 }

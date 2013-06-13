@@ -49,8 +49,7 @@ public class ChatPanel extends JPanel implements MouseListener{
     
     private static final int Width = 350;
     
-    public ChatPanel(ChatController c){
-        this.controller = c;
+    public ChatPanel(){
         initComponents();
     }
     
@@ -58,7 +57,6 @@ public class ChatPanel extends JPanel implements MouseListener{
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.setPreferredSize(new Dimension(Width, 450));
         this.setMaximumSize(new Dimension(Width, 450));
-        setBackground(new Color(0, 0, 0, 0));
         
         // Hien thi text chat
         pTextPane = new JEditorPane();
@@ -112,8 +110,8 @@ public class ChatPanel extends JPanel implements MouseListener{
         //
         txtText = new JTextArea();
         txtText.setLayout(new FlowLayout(FlowLayout.RIGHT, 2, 22));   
-        txtText.setPreferredSize(new Dimension(Width, 100));
-        txtText.setMaximumSize(new Dimension(Width, 100));
+        txtText.setPreferredSize(new Dimension(Width, 110));
+        txtText.setMaximumSize(new Dimension(Width, 110));
         
         btSend = new JButton("Gửi");
         btSend.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
@@ -124,7 +122,12 @@ public class ChatPanel extends JPanel implements MouseListener{
         this.add(txtText);        
     }
     
-    private String template = "<div style='color:balck'>\n" +
+    public void setController(ChatController c)
+    {
+        this.controller = c;
+    }
+    
+    private String template = "<div style='color:black'>\n" +
             "<span><b>NAME: </b></span>" + 
             "CONTENT" +
             "</div>";

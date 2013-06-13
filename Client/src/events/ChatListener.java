@@ -4,12 +4,11 @@
  */
 package events;
 
-
 /**
  *
  * @author Minh Khanh
  */
-public interface GameListener {
-    public void SendData(int r, int c);
-    public void EndGame(boolean isWin);
+public interface ChatListener {
+    public void SendMessage(String msg);
+    public void InvitePlay();
 }
