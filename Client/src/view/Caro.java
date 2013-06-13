@@ -4,17 +4,25 @@
  */
 package View;
 
-import Controller.GameController;
 import controller.ChatController;
-import enums.ModePlay;
 import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
  * @author Minh Khanh
  */
 public class Caro extends JFrame{
+    
+    private int WidthMin = 400;
+    private int WidthMax = 900;
+    private JPanel content;
+    
     public Caro()
     {
         initComponents();
@@ -22,19 +30,28 @@ public class Caro extends JFrame{
     
     private void initComponents()
     {
-        setSize(840, 600);
+        setSize(WidthMin, 600);
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         
-        GameController gameController = new GameController(ModePlay.Computer);
-        GamePanel gamePanel = new GamePanel(gameController);
+        setLayout(new FlowLayout(FlowLayout.CENTER, 20, 20));
+        
+        content = new JPanel();
+        content.setLayout(new BorderLayout(10, 20));        
         ChatController chatController = new ChatController();
         view.ChatPanel chatPanel = new view.ChatPanel(chatController);
         
-        this.setLayout(new BorderLayout());
-            
-        add(gamePanel, BorderLayout.CENTER);
-        add(chatPanel, BorderLayout.EAST);
-        
+        JPanel center = new JPanel();
+        center.setLayout(new BoxLayout(center, BoxLayout.Y_AXIS));
+        center.add(Box.createRigidArea(new Dimension(10, 65)));
+        center.add(chatPanel);
+        content.add(center, BorderLayout.CENTER);        
+        add(content);
+    }
+    
+    public void addGamePanel(GamePanel gamePanel)
+    {
+        setSize(WidthMax, 600);
+        content.add(gamePanel, BorderLayout.WEST);
     }
     
     public static void main(String args[]) {

@@ -5,6 +5,7 @@
 package View;
 
 import events.TimeoutListener;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -40,6 +41,7 @@ public class TimePanel extends JPanel implements ActionListener{
         counter = TIMEOUT;
         namePlayer = new JLabel();
         JPanel lbpanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        lbpanel.setBackground(new Color(0, 0, 0, 0));
         lbpanel.add(namePlayer);
         progbTimer = new JProgressBar(0, TIMEOUT);
         progbTimer.setPreferredSize(new Dimension(150, 30));

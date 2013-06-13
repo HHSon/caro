@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.BorderFactory;
+import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JEditorPane;
@@ -46,7 +47,7 @@ public class ChatPanel extends JPanel implements MouseListener{
     private boolean isItalic;
     private boolean isUnderline;
     
-    private static final int Width = 250;
+    private static final int Width = 350;
     
     public ChatPanel(ChatController c){
         this.controller = c;
@@ -57,23 +58,24 @@ public class ChatPanel extends JPanel implements MouseListener{
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.setPreferredSize(new Dimension(Width, 450));
         this.setMaximumSize(new Dimension(Width, 450));
+        setBackground(new Color(0, 0, 0, 0));
         
         // Hien thi text chat
         pTextPane = new JEditorPane();
         pTextPane.setEditable(false);
         pTextPane.setContentType("text/html");
         pTextPane.setText("<html><body><div id='mark'></div></body></html>");
-        pTextPane.setBackground(Color.white);
-        pTextPane.setMaximumSize(new Dimension(Width, 250));
-        pTextPane.setPreferredSize(new Dimension(Width, 250));
+        pTextPane.setBackground(Color.white);        
         DefaultCaret caret = (DefaultCaret)pTextPane.getCaret();
         caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);        
         
         JScrollPane scrollPane = new JScrollPane();
         scrollPane.setBorder(BorderFactory.createLineBorder(Color.black));
         scrollPane.setViewportView(pTextPane);
+        scrollPane.setMaximumSize(new Dimension(Width, 300));
+        scrollPane.setPreferredSize(new Dimension(Width, 300));
         this.add(scrollPane);
-        
+        this.add(Box.createRigidArea(new Dimension(20, 15)));
         //button panel
         JPanel formatPanel = new JPanel();
         formatPanel.setLayout(new BoxLayout(formatPanel, BoxLayout.X_AXIS));
@@ -105,6 +107,7 @@ public class ChatPanel extends JPanel implements MouseListener{
         btPanel.add(formatPanel, BorderLayout.WEST);
         btPanel.add(btInvite, BorderLayout.EAST);
         this.add(btPanel);
+        this.add(Box.createRigidArea(new Dimension(20, 15)));
         
         //
         txtText = new JTextArea();

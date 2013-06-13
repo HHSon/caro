@@ -11,6 +11,7 @@ import Model.Player;
 import events.GameListener;
 import events.TimeoutListener;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.MouseAdapter;
@@ -58,6 +59,7 @@ public class GamePanel extends JPanel implements TimeoutListener, GameListener{
         timePanel.add(timerPlayer1);
         timePanel.add(Box.createRigidArea(new Dimension(20, 5)));
         timePanel.add(timerPlayer2);
+        timePanel.setBackground(new Color(0, 0, 0, 0));
         
         btPlayAgain = new JButton("Play");
         JPanel btpanel = new JPanel();
@@ -74,7 +76,8 @@ public class GamePanel extends JPanel implements TimeoutListener, GameListener{
         
         JPanel time = new JPanel(new BorderLayout());
         time.add(timePanel, BorderLayout.WEST);
-        time.add(btpanel, BorderLayout.EAST);        
+        time.add(btpanel, BorderLayout.EAST);  
+        time.setBackground(new Color(0, 0, 0, 0));
         
         boardPanel = new BoardPanel(game);
         BoardController boardController = new BoardController(game, boardPanel, controller.getMode());
