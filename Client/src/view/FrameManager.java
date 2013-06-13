@@ -65,8 +65,7 @@ public class FrameManager {
     
     public void disposeSignUpFrame() {
         if (signUpFrame != null)
-            signUpFrame.setVisible(false);
-        
+            signUpFrame.dispose();
     }
     
     public void disposeMainFrame() {

@@ -7,7 +7,6 @@ import network.packet.Packet;
 import network.symbol.Symbol;
 import view.FrameManager;
 import view.LoginFrame;
-import view.Main;
 
 public class LoginModel {
     private LoginFrame loginFrame;
@@ -32,6 +31,10 @@ public class LoginModel {
     }
     
     public void login() {
+        if (Global.getMainConnection() == null) {
+            Global.newMainConnection();
+        }
+        
         if (loginFrame.checkInputData() == false) {
             return;
         }
@@ -39,14 +42,14 @@ public class LoginModel {
         String password = loginFrame.getPassword();
         
         Login pktLogin = new Login(username, password, Symbol.TYPE_LOGIN, Symbol.FLAG_REQUEST, Symbol.ACCEPT_FALASE);
-        Main.mainConnection.sendByte(pktLogin.createData());
+        Global.getMainConnection().sendByte(pktLogin.createData());
 
         network.packet.Packet pkt = null;
-      //  Main.mainConnection.setTimeOut(Symbol.TIMEOUT_LOGIN);
+        Global.getMainConnection().setTimeOut(Symbol.TIMEOUT_LOGIN);
 
         for (int i = 0; i < Symbol.WAITTING_REQUEST_LOGIN; i++) {
             try {
-                pkt = Packet.buildUDPPacket(Main.mainConnection.rcvByte());
+                pkt = Packet.buildUDPPacket(Global.getMainConnection().rcvByte());
                 break;
             } catch (IOException ex) {
                 if (i == Symbol.WAITTING_REQUEST_LOGIN - 1) {
@@ -80,6 +83,6 @@ public class LoginModel {
             }
         }
         
-        Main.mainConnection.setTimeOut(0);
+        Global.getMainConnection().setTimeOut(0);
     }
 }

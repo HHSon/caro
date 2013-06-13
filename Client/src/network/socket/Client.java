@@ -15,6 +15,7 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import network.packet.Packet;
 import network.symbol.Symbol;
 
 //import java.lang.ArrayIndexOutOfBoundsException;
@@ -166,3 +167,4 @@ class RunClient {
         Client client = new Client("127.0.0.1", 5000, 100);
     }
 }
+

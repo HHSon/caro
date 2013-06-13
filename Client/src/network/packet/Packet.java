@@ -78,7 +78,7 @@ public abstract class Packet {
             return new Login(data);
         }
 
-        if (data[0] == Symbol.TIMEOUT_LOGIN) {
+        if (data[0] == Symbol.TYPE_LOGOUT) {
             return new Logout(data);
         }
 

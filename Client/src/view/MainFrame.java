@@ -1,17 +1,33 @@
 package view;
 
+import controller.MainFrameController;
 import java.awt.GraphicsEnvironment;
 import java.awt.Rectangle;
+import model.Global;
+import model.MainFrameModel;
 
 
 public class MainFrame extends javax.swing.JFrame {
 
+    private MainFrameController mainFrameController;
+    private MainFrameModel mainFrameModel;
+    
+    
     public MainFrame() {
         initComponents();
         initScreen();
+        
+        mainFrameModel = new MainFrameModel(this);
+        mainFrameController = new MainFrameController(this, mainFrameModel);
     }
     
     private void initScreen() {
+        if (Global.userName != null) {
+            lblUserName.setText(Global.userName);
+            lblScore.setText("" + Global.score);
+        }
+        
+        
         Rectangle screenRect = GraphicsEnvironment
                 .getLocalGraphicsEnvironment()
                 .getMaximumWindowBounds();
@@ -19,10 +35,6 @@ public class MainFrame extends javax.swing.JFrame {
         this.setLocation(
                 screenRect.width - this.getPreferredSize().width,
                 0);
-    }
-    
-    private void logOut() {
-        
     }
     
     private void logOutAndQuit() {
@@ -41,9 +53,9 @@ public class MainFrame extends javax.swing.JFrame {
         jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        lblUserName = new javax.swing.JLabel();
+        lblScore = new javax.swing.JLabel();
+        lblContest = new javax.swing.JLabel();
         contestPanel1 = new view.ContestPanel();
         friendPanel1 = new view.FriendListPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -65,12 +77,12 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel1.setText("lblIcon");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Tên đăng nhập");
+        lblUserName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblUserName.setText("Tên đăng nhập");
 
-        jLabel3.setText("Điểm:");
+        lblScore.setText("Điểm:");
 
-        jLabel4.setText("Giải đang tham gia:");
+        lblContest.setText("Giải đang tham gia:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -81,22 +93,22 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(22, 22, 22)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2))
+                    .addComponent(lblContest)
+                    .addComponent(lblScore)
+                    .addComponent(lblUserName))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(jLabel2)
+                .addComponent(lblUserName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(lblScore, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
+                .addComponent(lblContest)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -157,7 +169,7 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuItemLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemLogoutActionPerformed
-        logOut();
+        mainFrameController.logout();
     }//GEN-LAST:event_menuItemLogoutActionPerformed
 
     private void menuItemLogoutAndQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemLogoutAndQuitActionPerformed
@@ -168,15 +180,15 @@ public class MainFrame extends javax.swing.JFrame {
     private view.ContestPanel contestPanel1;
     private view.FriendListPanel friendPanel1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
+    private javax.swing.JLabel lblContest;
+    private javax.swing.JLabel lblScore;
+    private javax.swing.JLabel lblUserName;
     private javax.swing.JMenuItem menuItemAbout;
     private javax.swing.JMenuItem menuItemLogout;
     private javax.swing.JMenuItem menuItemLogoutAndQuit;

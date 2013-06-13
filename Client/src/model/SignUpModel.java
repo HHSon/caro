@@ -6,7 +6,6 @@ import network.packet.Packet;
 import network.packet.Registry;
 import network.symbol.Symbol;
 import view.FrameManager;
-import view.Main;
 import view.SignUpFrame;
 
 
@@ -39,13 +38,13 @@ public class SignUpModel {
         Registry pktSend = new Registry(userName, password, fullName,
                 Symbol.TYPE_SIGNUP, Symbol.FLAG_REQUEST, Symbol.ACCEPT_FALASE);
         pktSend.printInformation();
-        Main.mainConnection.sendByte(pktSend.createData());
-        Main.mainConnection.setTimeOut(Symbol.TIMEOUT_SIGN_UP);
+        Global.getMainConnection().sendByte(pktSend.createData());
+        Global.getMainConnection().setTimeOut(Symbol.TIMEOUT_SIGN_UP);
 
         Packet pkt = null;
         for (int i = 0; i < Symbol.WAITTING_REQUEST_SIGNUP; i++) {
             try {
-                pkt = Packet.buildUDPPacket(Main.mainConnection.rcvByte());
+                pkt = Packet.buildUDPPacket(Global.getMainConnection().rcvByte());
                 break;
 
             } catch (IOException ex) {
@@ -90,6 +89,6 @@ public class SignUpModel {
         }
 
 
-        Main.mainConnection.setTimeOut(0);
+        Global.getMainConnection().setTimeOut(0);
     }
 }
