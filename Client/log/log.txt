@@ -1,0 +1,359 @@
+2013-06-06 14:16:12:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 14:16:17:    Sucessfully Function sendObjcet to: /192.168.1.1:5000
+2013-06-06 14:16:17:    Sucessfully set timeout 5000
+2013-06-06 14:16:22:    Khong nhan duoc goi tin phan hoi tu server.javax.imageio.IIOException: Read timed out
+2013-06-06 14:16:22:    Tai khoan cung cap khong dung.
+2013-06-06 14:16:31:    Sucessfully set timeout 0
+2013-06-06 14:17:24:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 14:17:38:    Sucessfully Function sendObjcet to: /192.168.1.1:5000
+2013-06-06 14:17:38:    Sucessfully set timeout 5000
+2013-06-06 14:17:43:    Khong nhan duoc goi tin phan hoi tu server.javax.imageio.IIOException: Read timed out
+2013-06-06 14:17:43:    Tai khoan cung cap khong dung.
+2013-06-06 14:18:05:    Sucessfully set timeout 0
+2013-06-06 14:18:18:    Sucessfully Function sendObjcet to: /192.168.1.1:5000
+2013-06-06 14:18:18:    Set timeout cho mainsocket 2000
+2013-06-06 14:18:20:    Dang ky ko thanh cong voi ten tai khoan: admin2 Read timed out
+2013-06-06 14:18:20:    Set time out = 0 cho mainsocket
+2013-06-06 14:19:55:    Can't connect server
+2013-06-06 14:20:18:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 14:21:17:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 14:21:30:    Sucessfully Function sendObjcet to: /192.168.1.1:5000
+2013-06-06 14:21:30:    Set timeout cho mainsocket 2000
+2013-06-06 14:21:30:    Sucessfully Function rcvObjcet from: /192.168.1.1:5000
+2013-06-06 14:21:32:    Dang ky thanh cong voi ten tai khoan: admin2
+2013-06-06 14:21:32:    Set time out = 0 cho mainsocket
+2013-06-06 14:21:38:    Sucessfully Function sendObjcet to: /192.168.1.1:5000
+2013-06-06 14:21:38:    Sucessfully set timeout 5000
+2013-06-06 14:21:43:    Khong nhan duoc goi tin phan hoi tu server.javax.imageio.IIOException: Read timed out
+2013-06-06 14:21:43:    Tai khoan cung cap khong dung.
+2013-06-06 14:21:46:    Sucessfully set timeout 0
+2013-06-06 14:22:34:    Sucessfully Function sendObjcet to: /192.168.1.1:5000
+2013-06-06 14:22:34:    Sucessfully set timeout 5000
+2013-06-06 14:22:39:    Khong nhan duoc goi tin phan hoi tu server.javax.imageio.IIOException: Read timed out
+2013-06-06 14:22:39:    Tai khoan cung cap khong dung.
+2013-06-06 14:22:41:    Sucessfully set timeout 0
+2013-06-06 14:26:48:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 14:27:03:    Sucessfully Function sendObjcet to: /192.168.1.1:5000
+2013-06-06 14:27:03:    Sucessfully set timeout 5000
+2013-06-06 14:27:08:    Khong nhan duoc goi tin phan hoi tu server.javax.imageio.IIOException: Read timed out
+2013-06-06 14:27:08:    Tai khoan cung cap khong dung.
+2013-06-06 14:27:12:    Sucessfully set timeout 0
+2013-06-06 14:27:47:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 14:27:54:    Sucessfully Function sendObjcet to: /192.168.1.1:5000
+2013-06-06 14:27:54:    Sucessfully set timeout 5000
+2013-06-06 14:27:54:    Sucessfully Function rcvObjcet from: /192.168.1.1:5000
+2013-06-06 14:27:54:    Tai khoan cung cap khong dung.
+2013-06-06 14:27:56:    Sucessfully set timeout 0
+2013-06-06 14:28:16:    Sucessfully Function sendObjcet to: /192.168.1.1:5000
+2013-06-06 14:28:16:    Sucessfully set timeout 5000
+2013-06-06 14:28:21:    Khong nhan duoc goi tin phan hoi tu server.javax.imageio.IIOException: Read timed out
+2013-06-06 14:28:21:    Tai khoan cung cap khong dung.
+2013-06-06 14:28:23:    Sucessfully set timeout 0
+2013-06-06 14:28:29:    Sucessfully Function sendObjcet to: /192.168.1.1:5000
+2013-06-06 14:28:29:    Sucessfully set timeout 5000
+2013-06-06 14:28:34:    Khong nhan duoc goi tin phan hoi tu server.javax.imageio.IIOException: Read timed out
+2013-06-06 14:28:34:    Tai khoan cung cap khong dung.
+2013-06-06 14:28:40:    Sucessfully set timeout 0
+2013-06-06 14:29:09:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 14:29:22:    Sucessfully Function sendObjcet to: /192.168.1.1:5000
+2013-06-06 14:29:24:    Sucessfully set timeout 5000
+2013-06-06 14:29:50:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 14:29:53:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 14:30:00:    Sucessfully Function sendObjcet to: /192.168.1.1:5000
+2013-06-06 14:30:01:    Sucessfully set timeout 5000
+2013-06-06 14:32:17:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 14:32:23:    Sucessfully Function sendObjcet to: /192.168.1.1:5000
+2013-06-06 14:32:23:    Sucessfully set timeout 5000
+2013-06-06 14:32:28:    Khong nhan duoc goi tin phan hoi tu server.javax.imageio.IIOException: Read timed out
+2013-06-06 14:32:28:    Tai khoan cung cap khong dung.
+2013-06-06 14:32:29:    Sucessfully set timeout 0
+2013-06-06 14:39:13:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:13:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:13:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:13:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:13:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:13:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:13:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:14:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:14:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:14:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:14:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:14:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:15:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:15:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:15:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:15:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:15:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:15:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:15:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:15:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:15:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:15:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:16:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:16:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:16:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:16:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:16:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:16:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:16:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:16:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:16:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:16:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:16:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:16:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:17:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:17:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:17:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:17:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:17:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:17:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:17:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:17:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:17:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:17:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:17:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:17:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:18:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:18:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:18:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:18:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:18:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:18:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:18:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:18:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:18:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:18:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:18:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:18:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:19:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:19:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:19:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:19:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:19:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:19:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:19:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:19:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:19:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:20:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:20:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:20:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:20:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:20:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:20:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:20:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:20:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:20:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:20:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:20:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:20:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:21:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:21:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:21:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:21:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:21:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:21:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:21:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:21:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:21:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:21:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:21:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:21:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:22:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:22:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:22:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:22:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:22:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:22:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:22:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:22:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:22:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:22:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:22:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:22:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:23:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:23:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:23:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:23:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:23:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:23:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:23:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:23:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:23:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:23:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:23:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:23:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:24:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:24:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:24:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:24:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:24:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:25:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:25:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:25:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:25:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:25:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:25:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:25:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:25:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:25:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:25:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:26:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:26:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:26:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:26:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:26:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:26:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:26:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:26:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:26:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:26:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:26:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:26:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:27:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:27:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:27:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:27:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:27:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:27:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:27:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:27:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:27:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:27:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:27:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:27:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:28:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:28:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:28:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:28:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:28:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:28:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:28:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:28:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:28:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:28:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:28:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:28:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:29:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:29:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:29:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:29:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:29:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:29:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:29:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:29:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:29:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:30:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:30:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:30:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:30:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:30:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:30:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:30:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:30:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:30:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:30:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:30:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:30:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:31:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:31:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:31:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:31:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:31:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:31:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:31:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:31:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:31:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:31:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:31:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:31:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:32:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:32:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:32:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:32:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:32:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:32:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:32:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:32:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:32:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:32:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:32:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:32:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:33:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:33:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:33:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:33:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:33:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:34:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:34:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:34:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:34:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:34:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:34:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:34:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:34:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:34:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:34:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:35:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:35:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:35:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:35:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:35:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:35:    Successfully  send pkt to: 192.168.1.1:5200
+2013-06-06 14:39:35:    recievePacket not reliable: Sucessfully recieve pkt form:192.168.1.1 port: 5200
+2013-06-06 14:39:35:    Time out rcv ACK: 192.168.1.1:5200
+2013-06-06 14:39:35:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:35:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:35:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:39:35:    Successfully  send pkt to: 127.0.0.1:5200
+2013-06-06 14:39:36:    recievePacket not reliable: Can't recieve pkt
+2013-06-06 14:39:36:    Can't rcv ACK from: 127.0.0.1 port: 5200
+2013-06-06 14:41:33:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 14:41:43:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 14:41:49:    Sucessfully Function sendObjcet to: /192.168.1.1:5000
+2013-06-06 14:41:49:    Sucessfully set timeout 5000
+2013-06-06 14:41:54:    Khong nhan duoc goi tin phan hoi tu server.javax.imageio.IIOException: Read timed out
+2013-06-06 14:41:54:    Tai khoan cung cap khong dung.
+2013-06-06 14:42:22:    Sucessfully set timeout 0
+2013-06-06 14:42:42:    Sucessfully Function sendObjcet to: /192.168.1.1:5000
+2013-06-06 14:42:42:    Sucessfully set timeout 5000
+2013-06-06 14:42:47:    Khong nhan duoc goi tin phan hoi tu server.javax.imageio.IIOException: Read timed out
+2013-06-06 14:42:47:    Tai khoan cung cap khong dung.
+2013-06-06 14:45:47:    Sucessfully set timeout 0
+2013-06-06 14:46:55:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 14:48:19:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 14:56:06:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 14:56:45:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 14:58:24:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 14:58:33:    Can't connect server
+2013-06-06 15:01:22:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 15:01:27:    Can't connect server
+2013-06-06 15:01:56:    Can't connect server
+2013-06-06 15:02:24:    Can't connect server
+2013-06-06 15:02:29:    Can't connect server
+2013-06-06 15:03:56:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 15:04:55:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 15:05:59:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 15:06:11:    Can't connect server
+2013-06-06 15:06:36:    Can't connect server
+2013-06-06 15:06:46:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 15:08:00:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 15:08:33:    Can't connect server
+2013-06-06 15:08:49:    Can't connect server
+2013-06-06 15:08:56:    Can't connect server
+2013-06-06 15:09:14:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 15:10:26:    Can't connect server
+2013-06-06 15:11:16:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 15:13:17:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 15:16:04:    Can't connect server
+2013-06-06 15:16:25:    Successfully connection to server:192.168.1.1:5000
+2013-06-06 15:17:25:    Successfully connection to server:192.168.1.1:5000
+2013-06-09 21:52:20:    Can't connect server
+2013-06-13 00:56:49:    Can't connect server
+2013-06-13 00:57:43:    Can't connect server
+2013-06-13 01:29:02:    Can't connect server
+2013-06-13 01:29:14:    Can't connect server
+2013-06-13 01:29:42:    Can't connect server
+2013-06-13 07:55:38:    Can't connect server
+2013-06-13 07:59:28:    Can't connect server
+2013-06-13 08:15:25:    Can't connect server
+2013-06-13 08:16:02:    Can't connect server
