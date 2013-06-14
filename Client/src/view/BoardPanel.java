@@ -7,27 +7,35 @@ package View;
 import Controller.BoardController;
 import Model.Game;
 import enums.Chess;
+import enums.GameState;
 import enums.PlayerCode;
 import java.awt.BasicStroke;
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Cursor;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.Stroke;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.Timer;
 
 /**
  *
  * @author Minh Khanh
  */
-public class BoardPanel extends JPanel {
+public class BoardPanel extends JPanel implements ActionListener{
 
     private int sizeCell;
     private int nCol;
@@ -43,10 +51,19 @@ public class BoardPanel extends JPanel {
     private Graphics graphic;
     private Game game;
     private boolean isDrawVitualChess;
+    
+    private BufferedImage waiting1;
+    private BufferedImage waiting2;
+    private BufferedImage waiting3;
+    private int waitingCount = 0;
+    private Timer timerWaiting;
 
     public BoardPanel(Game game) {
         this.game = game;
         init();
+        
+        timerWaiting = new Timer(200, this);
+        timerWaiting.start();
     }
 
     public void init() {
@@ -62,13 +79,17 @@ public class BoardPanel extends JPanel {
         setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         setSize(nCol * sizeCell, nRow * sizeCell);
         try {
+            
             virtualChessO = ImageIO.read(new File("./src/images/virtual_chessO.png"));
             virtualChessX = ImageIO.read(new File("./src/images/virtual_chessX.png"));
             chessPlayerO = ImageIO.read(new File("./src/images/chessO.png"));
             chessPlayerX = ImageIO.read(new File("./src/images/chessX.png"));
+            
+            chessPlayerX = ImageIO.read(new File("./src/images/bg.jpg"));
+            
         } catch (IOException ex) {
             Logger.getLogger(BoardPanel.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }        
     }
 
     public void draw(Graphics g) {
@@ -109,9 +130,29 @@ public class BoardPanel extends JPanel {
                     end.x * sizeCell + sizeCell / 2,
                     end.y * sizeCell + sizeCell / 2);
             g2d.setColor(foreground);
-            g2d.setStroke(oldStroke);
+            g2d.setStroke(oldStroke);            
         }
         
+        if (game.getState() == GameState.Waiting)
+        {
+            BufferedImage waiting = null;
+            if (waitingCount == 1)
+            {
+                waiting = waiting1;
+            }
+            else if (waitingCount == 2)
+            {
+                waiting = waiting2;
+            }
+            else if (waitingCount == 3)
+            {
+                waiting = waiting3;
+            }
+            if (waiting != null)
+            {
+                graphic.drawImage(waiting, 25, 200, this);
+            }
+        }        
         g.drawImage(buffer, 0, 0, this);
     }
 
@@ -168,5 +209,14 @@ public class BoardPanel extends JPanel {
     {
         addMouseListener(c);
         addMouseMotionListener(c);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        waitingCount++;
+        if (waitingCount > 3)
+        {
+            waitingCount = 1;
+        }
     }
 }

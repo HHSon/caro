@@ -7,6 +7,7 @@ package Model;
 import enums.ModePlay;
 import Controller.GameController;
 import enums.Chess;
+import enums.GameState;
 import enums.PlayerCode;
 import java.awt.Point;
 
@@ -24,6 +25,7 @@ public class Game {
     private boolean isPlaying;
     private boolean endGame;
     private GameController controller;
+    private GameState state;
 
     public Game(String namePlayer1, String namePlayer2, GameController c) {          
         initBoard();
@@ -36,6 +38,8 @@ public class Game {
         isPlaying = false;
         endGame = false;
         controller = c;
+             
+        state = GameState.NotReady;
     }     
     
     private void initBoard()
@@ -286,5 +290,10 @@ public class Game {
     public Player CurrentPlayerMove()
     {
         return this.currentPlayerMove;
+    }
+    
+    public GameState getState()
+    {
+        return this.state;
     }
 }
